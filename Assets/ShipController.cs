@@ -7,7 +7,10 @@ public class ShipController : MonoBehaviour
 {
     // Start is called before the first frame update
   [SerializeField]
-  float speed = 0.02f;
+  float speed = 6f;
+  [SerializeField]
+  GameObject SkibidiSigma;
+
     void Start()
     {
         
@@ -30,6 +33,11 @@ public class ShipController : MonoBehaviour
         // Vector2 movementY = new Vector2(0, 1) * 0.010f * yInput;
 
         transform.Translate(movement);
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+          Instantiate(SkibidiSigma, transform.position, Quaternion.identity);
+        }
      
 
 
@@ -37,3 +45,6 @@ public class ShipController : MonoBehaviour
     }
 
 }
+
+
+
