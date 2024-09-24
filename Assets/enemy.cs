@@ -23,10 +23,15 @@ public class enemy : MonoBehaviour
     {
         transform.Translate(Vector2.down * Time.deltaTime * speed);
         
-        if(transform.position.y > -Camera.main.orthographicSize + 1)
+        if(transform.position.y < -Camera.main.orthographicSize + 1)
         {
             Destroy(this.gameObject);
         }
 
     }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+  {
+    Destroy(this.gameObject); 
+  }
 }
