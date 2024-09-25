@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1497250267789473718}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7420c17eb6c0b141b022f951f0892f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
+  ExplosionPrefab: {fileID: 1052859802758272, guid: 7e5c5b1c1b18764459c69710c7dc4adc,
+    type: 3}
 --- !u!58 &-1497250267789473718
 CircleCollider2D:
   m_ObjectHideFlags: 0

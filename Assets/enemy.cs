@@ -7,6 +7,8 @@ public class enemy : MonoBehaviour
     [SerializeField]
     float speed = 1f;
 
+    [SerializeField]
+    GameObject ExplosionPrefab;
     
     void Start()
     {
@@ -32,6 +34,7 @@ public class enemy : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
   {
+    Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
     Destroy(this.gameObject); 
   }
 }

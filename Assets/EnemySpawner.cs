@@ -8,8 +8,8 @@ public class EnemySpawner : MonoBehaviour
     GameObject enemyPrefab;
 
     [SerializeField]
-    float timeBetweenSpawns = 1f;
-    float timeSinceLastSpawn = 0;
+    float timeBetweenSpawns = 15;
+    float timeSinceLastSpawn = 10;
 
     void Update()
     {
