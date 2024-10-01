@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
     {
         timeSinceLastSpawn += Time.deltaTime;
 
-        if (timeSinceLastSpawn > timeBetweenSpawns);
+        if (timeSinceLastSpawn > timeBetweenSpawns)
         {
              Instantiate(enemyPrefab);
              timeSinceLastSpawn = 0;

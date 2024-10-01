@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class explosionController : MonoBehaviour
 {
-    void Start()
+    ParticleSystem explosion;
+
+    void Update()
     {
-    Destroy(this.gameObject, 0.3f);   
+        explosion = GetComponent<ParticleSystem>();
+        if(!explosion.isPlaying){
+            Destroy(gameObject);
+        }
+        
     }
 }
