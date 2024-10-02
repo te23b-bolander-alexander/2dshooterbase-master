@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShipController : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class ShipController : MonoBehaviour
   [SerializeField]
   int maxHealth = 10;
   int currentHealth;
-  
+
   [SerializeField]
   Slider hpBar;
 
@@ -59,12 +60,14 @@ public class ShipController : MonoBehaviour
 
   private void OnTriggerEnter2D(Collider2D other)
   {
-    print("huh?");
     if (other.tag == "enemy")
     {
       currentHealth--;
       hpBar.value = currentHealth;
-      print(currentHealth);
+      if (currentHealth == 0)
+      {
+      SceneManager.LoadScene(1);
+      }
     }
 
   }
